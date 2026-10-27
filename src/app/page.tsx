@@ -1004,18 +1004,33 @@ export default function BusinessManagerPage() {
               </div>
             </div>
 
-            <div className={`text-xs text-center md:text-right ${isDarkMode ? "text-[#9CA3AF]" : "text-slate-600"}`}>
+            <div className={`text-xs text-center md:text-right space-y-1 ${isDarkMode ? "text-[#9CA3AF]" : "text-slate-600"}`}>
               <p className="font-semibold text-slate-900 dark:text-white">
-                Développé par Tariq Abala d&apos;une manière professionnelle
+                Développé par{" "}
+                <a
+                  href="https://tariqabala.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-indigo-600 dark:text-indigo-400 hover:underline font-bold"
+                >
+                  Tariq Abala
+                </a>
               </p>
-              <p className="mt-1 text-slate-400 font-mono text-[10px]">
-                Stack : Next.js 16 • React 19 • Tailwind CSS • TypeScript
+              <p className="text-[11px] font-medium text-slate-700 dark:text-slate-300">
+                Web Development &amp; Digital Solutions
+              </p>
+              <p className="text-[10px] text-slate-400 font-mono">
+                Professional Websites • Business Applications • Custom Admin Panels
               </p>
             </div>
           </div>
 
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-            <p>© 2026 BusinessManager. Tous droits réservés.</p>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="font-semibold text-slate-700 dark:text-slate-300">© 2026 TARIQ ABALA. Tous droits réservés.</span>
+              <span className="text-slate-400">•</span>
+              <span>BusinessManager Cloud Maroc</span>
+            </div>
             <div className="flex gap-6">
               <a href="#simulateur" className="hover:text-slate-900 dark:hover:text-slate-300">
                 Générateur

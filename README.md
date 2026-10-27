@@ -87,5 +87,8 @@ Variables optionnelles pour un déploiement en production :
 
 ---
 
-## Auteur
-Développé par **Tariq Abala** d'une manière professionnelle.
+## Auteur & Copyright
+Développé par [**Tariq Abala**](https://tariqabala.com) — Web Development & Digital Solutions.
+*Professional Websites • Business Applications • Custom Admin Panels*
+
+© 2026 TARIQ ABALA. Tous droits réservés.
