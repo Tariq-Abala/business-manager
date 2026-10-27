@@ -3,21 +3,12 @@
 @theme {
   --color-bg-main: #F8FAFC;
   --color-bg-card: #FFFFFF;
+  --color-accent-blue: #2563EB;
   --color-accent-indigo: #4F46E5;
-  --color-accent-violet: #7C3AED;
+  --color-accent-teal: #0D9488;
   --color-accent-emerald: #059669;
   --color-text-primary: #0F172A;
   --color-text-secondary: #475569;
-  --color-border-dark: rgba(79, 70, 229, 0.2);
-}
-
-:root {
-  --bg-main: #F8FAFC;
-  --bg-card: #FFFFFF;
-  --accent-indigo: #4F46E5;
-  --accent-violet: #7C3AED;
-  --text-primary: #0F172A;
-  --text-secondary: #475569;
 }
 
 html {
@@ -34,12 +25,13 @@ body {
 }
 
 ::selection {
-  background-color: rgba(79, 70, 229, 0.25);
-  color: #0F172A;
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #1D4ED8;
 }
 
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-track {
   background: #F8FAFC;
@@ -50,4 +42,30 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
+}
+
+/* Print styles for printable invoice */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .no-print,
+  aside,
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .printable-document {
+    margin: 0 !important;
+    padding: 20px !important;
+    border: none !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }

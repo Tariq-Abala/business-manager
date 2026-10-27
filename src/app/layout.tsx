@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { BusinessProvider } from "@/context/BusinessContext";
 
 export const viewport: Viewport = {
   themeColor: "#F8FAFC",
@@ -8,10 +9,19 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "BusinessManager | Logiciel de Gestion Commerciale & Facturation PME",
+  title: "BusinessManager SaaS | Logiciel de Facturation & Gestion Commerciale PME",
   description:
-    "BusinessManager SaaS — Facturation marocaine conforme DGI (ICE, IF, RC), devis, suivi des encaissements et gestion de stock pour PME et indépendants.",
-  keywords: ["logiciel gestion", "facturation maroc", "SaaS PME", "devis", "ICE", "gestion commerciale", "comptabilité", "BusinessManager"],
+    "Application SaaS de facturation, devis, suivi des créances et gestion de stocks pour PME au Maroc. Projet de démonstration interactive conçu par Tariq Abala.",
+  keywords: [
+    "gestion commerciale",
+    "facturation PME",
+    "devis",
+    "créances",
+    "SaaS Maroc",
+    "Casablanca",
+    "stocks",
+    "BusinessManager",
+  ],
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
 };
@@ -21,8 +31,8 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className="min-h-screen bg-[#F8FAFC] text-[#0F172A] antialiased">
-        {children}
+      <body className="min-h-screen bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-blue-100 selection:text-blue-900">
+        <BusinessProvider>{children}</BusinessProvider>
       </body>
     </html>
   );
